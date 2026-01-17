@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+@import "tailwindcss";
+
+@theme {
+    extend: {
+        fontFamily: {
+        orbitron: ['Orbitron', 'sans-serif'],
+        rajdhani: ['Rajdhani', 'sans-serif'],
+        },
+    },
+
+    --color-background: #08070d;
+  --color-foreground: #f9f4ff;
+
+  --color-card: #100e1a;
+  --color-card-foreground: #f9f4ff;
+
+  --color-popover: #0c0a13;
+  --color-popover-foreground: #f9f4ff;
+
+  --color-primary: #a554f6;
+  --color-primary-foreground: #08070d;
+
+  --color-secondary: #181527;
+  --color-secondary-foreground: #f9f4ff;
+  --color-muted: #211e2d;
+  --color-muted-foreground: #b2a3c1;
+
+  --color-accent: #07e3f7;
+  --color-accent-foreground: #08070d;
+  --color-destructive: #ee4343;
+  --color-destructive-foreground: #f7f9fb;
+
+  --color-border: #322342;
+  --color-input: #181527;
+  --color-ring: #a554f6;
+
+  --color-radius: 0.75rem;
+
+  /* ======== TOKENS FUTURISTAS (em HEX) ======== */
+
+  --color-neon-purple: #a554f6;
+  --color-neon-blue: #07e3f7;
+  --color-neon-pink: #f43db7;
+  --color-dark-purple: #190c26;
+
+  /* ======== GLOW (sombras com RGBA numérico) ======== */
+
+  --color-glow-purple:
+    0 0 20px rgba(165, 84, 246, 0.5),
+    0 0 40px rgba(165, 84, 246, 0.3),
+    0 0 60px rgba(165, 84, 246, 0.1);
+
+  --color-glow-blue:
+    0 0 20px rgba(7, 227, 247, 0.5),
+    0 0 40px rgba(7, 227, 247, 0.3),
+    0 0 60px rgba(7, 227, 247, 0.1);
+
+  /* ======== GRADIENTES (em HEX) ======== */
+
+  --color-gradient-neon: linear-gradient(
+    135deg,
+    #a554f6 0%,
+    #07e3f7 100%
+  );
+
+  --color-gradient-dark: linear-gradient(
+    180deg,
+    #08070d 0%,
+    #11071a 50%,
+    #08070d 100%
+  );
+}
