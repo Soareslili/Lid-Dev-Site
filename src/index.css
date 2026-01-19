@@ -5,13 +5,10 @@
 @import "tailwindcss";
 
 @theme {
-    extend: {
-        fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
-        rajdhani: ['Rajdhani', 'sans-serif'],
-        },
-    },
 
+   --font-display: 'Rajdhani', sans-serif;
+  --font-orbitron: 'Orbitron', sans-serif;
+   
     --color-background: #08070d;
   --color-foreground: #f9f4ff;
 
@@ -73,4 +70,6 @@
     #11071a 50%,
     #08070d 100%
   );
+
+ 
 }
