@@ -39,7 +39,7 @@ const TypewriterText = ({ text, delay = 0 }: { text: string; delay?: number }) =
 };
 
 const skills = [
-    { icon: Code2, title: 'Desenvolvimento', desc: 'React, TypeScript, Next.js, Three.js' },
+    { icon: Code2, title: 'Desenvolvimento', desc: 'React, TypeScript, HTML, CSS, Javascript, Express, Node.js, MongoDB, Tailwind CSS, Styled Components' },
     { icon: Palette, title: 'Design UI/UX', desc: 'Interfaces modernas e intuitivas' },
     { icon: Zap, title: 'Performance', desc: 'Sites rápidos e otimizados' },
     { icon: Sparkles, title: 'Animações', desc: 'Experiências interativas e fluidas' },
@@ -50,7 +50,7 @@ const AboutSection = () => {
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
     return (
-        <section id="sobre" className="relative py-32 overflow-hidden"
+        <section id="sobre" className="relative py-30 overflow-hidden"
             style={{ backgroundColor: '#09070E' }}>
 
             {/* Background effects */}
@@ -69,7 +69,7 @@ const AboutSection = () => {
                         Sobre Mim
                     </span>
                     <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-                        <span className="text-gradient-neon">Lid.Dev</span>
+                        <span className="text-gradient-neon text-7xl">Lid.Dev</span>
                     </h2>
                 </motion.div>
 
@@ -109,13 +109,13 @@ const AboutSection = () => {
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                        <div className="text-lg text-muted-foreground mb-8 space-y-4">
+                        <div className="text-lg text-muted-foreground mb-12 space-y-4">
                             <TypewriterText
                                 text="Olá! Sou a Lidiane, desenvolvedora front-end e web, especializada em criar interfaces modernas, funcionais e visualmente impactantes."
                                 delay={500}
                             />
 
-                            <p className="text-foreground/80">
+                            <p className="text-foreground/80 mt-8">
                                 Sou desenvolvedora front-end e web, especializada na criação de interfaces
                                 modernas, funcionais e responsivas. Atuo no desenvolvimento de sites,
                                 landing pages e aplicações web com foco em performance, usabilidade
@@ -139,8 +139,7 @@ const AboutSection = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                                    className=" bg-accent-foreground  p-4 rounded-xl  shadow-gradient-neon
-  shadow-gradient-neon-hover  hover:scale-[1.02] transition-all duration-300"
+                                    className="bg-dark-purple p-4 rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_16px_rgba(55, 45, 59, 0.3)]"
                                 >
                                     <skill.icon className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
                                     <h3 className="font-display text-sm font-semibold text-foreground mb-1">

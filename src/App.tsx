@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
+import ProjectsSection from './components/ProjectsSection';
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
         <Navbar />
         <HeroSection />
         <AboutSection />
+        <ProjectsSection />
        
       </main>
     </>
