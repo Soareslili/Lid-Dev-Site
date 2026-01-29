@@ -40,7 +40,7 @@ const Navbar = () => {
             href="#hero"
             className="font-display text-2xl font-bold text-accent"
           >
-            Lid.<span className='text-primary'>Dev</span>
+           <span className='text-gradient-neon'> Lid.Dev</span>
           </a>
 
 

@@ -58,10 +58,12 @@
 
   /* ======== GRADIENTES (em HEX) ======== */
 
+ 
   --color-gradient-neon: linear-gradient(
-    135deg,
+    90deg,
     #a554f6 0%,
-    #07e3f7 100%
+    #07e3f7 50%,
+    #f43db7 100%
   );
 
   --color-gradient-dark: linear-gradient(
@@ -71,5 +73,11 @@
     #08070d 100%
   );
 
- 
+}
+
+.text-gradient-neon {
+  background: var(--color-gradient-neon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

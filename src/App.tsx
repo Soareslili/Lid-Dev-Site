@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
 
 function App() {
  
@@ -21,6 +22,7 @@ function App() {
       <main className="min-h-screen overflow-x-hidden">
         <Navbar />
         <HeroSection />
+        <AboutSection />
        
       </main>
     </>
