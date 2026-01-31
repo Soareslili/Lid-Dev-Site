@@ -111,8 +111,8 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
       </div>
 
       {/* Content */}
-      <div className="p-6" style={{ transform: 'translateZ(20px)' }}>
-        <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+      <div className="p-6 bg-primary/5 shadow-lg shadow-primary/50" style={{ transform: 'translateZ(20px)' }}>
+        <h3 className="font-display text-xl font-bold text-foreground mb-2  group-hover:text-primary transition-colors">
           {project.title}
         </h3>
         <p className="text-muted-foreground text-sm mb-4">
