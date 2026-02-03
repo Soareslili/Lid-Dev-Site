@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Send, Instagram, Mail, Phone} from 'lucide-react';
+import { Send, Instagram, Mail, Phone, Linkedin} from 'lucide-react';
 import { toast } from 'sonner';
 
 const ContactSection = () => {
@@ -19,9 +19,10 @@ const ContactSection = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, label: '@lid.dev', href: 'https://instagram.com/lid.dev' },
-    { icon: Phone, label: 'WhatsApp', href: 'https://wa.me/5500000000000' },
-    { icon: Mail, label: 'contato@lid.dev', href: 'mailto:contato@lid.dev' },
+    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/lid.dev?igsh=bWs3Y2d2djN2YXVh&utm_source=qr' },
+    { icon: Linkedin, label: 'Linkedin', href: 'http://www.linkedin.com/in/lidianesantossoares' },
+    { icon: Phone, label: 'WhatsApp', href: 'https://wa.me/5511948739869' },
+    { icon: Mail, label: 'Email', href: 'mailto:lidianesantossoares2@gmail.com' },
   ];
 
   return (

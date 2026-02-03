@@ -2,6 +2,9 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
+import Dashboard from '../assets/Dashboard.png'
+import Fitness from '../assets/Fitness.png'
+
 const projects = [
   {
     id: 1,
@@ -9,20 +12,23 @@ const projects = [
     description: 'Loja virtual com visualização 3D de produtos e animações fluidas.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
     tags: ['React', 'Three.js', 'Stripe'],
+    
   },
   {
     id: 2,
-    title: 'Dashboard Analytics',
-    description: 'Painel administrativo com gráficos interativos e tema dark.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    tags: ['Next.js', 'Chart.js', 'Tailwind'],
+    title: 'Dashboard DentalPro',
+    description: 'Dashboard de Gestão Odontológica desenvolvido para otimizar a organização, a eficiência e a tomada de decisão em clínicas.',
+    image: Dashboard,
+    tags: ['React', 'Tailwind', 'TypeScript'],
   },
   {
     id: 3,
-    title: 'App de Fitness',
-    description: 'Aplicativo de treino com animações motivacionais.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop',
-    tags: ['React Native', 'Lottie', 'Firebase'],
+    title: 'FitCoach – Landing Page para Personal Trainer',
+    description: 'Projeto desenvolvido para apresentar um serviço de personal trainer / fitness, com foco em conversão e experiência do usuário.',
+    image: Fitness,
+    tags: ['React', 'Tailwind', 'Typescript'],
+    liveURL:'https://fitcoach-nine.vercel.app/',
+    githubURL:'https://github.com/Soareslili/FITCOACH.git'
   },
   {
     id: 4,
@@ -101,12 +107,16 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
         
         {/* Overlay buttons */}
         <div className={`absolute inset-0 flex items-center justify-center gap-4 bg-background/80 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-          <button className="p-3 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform">
+          <a href={project.liveURL} 
+           target="_blank" rel='noopener noreferrer'
+          className="p-3 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform">
             <ExternalLink className="w-5 h-5" />
-          </button>
-          <button className="p-3 rounded-full bg-secondary text-secondary-foreground hover:scale-110 transition-transform">
+          </a>
+          <a href={project.githubURL} 
+           target="_blank" rel='noopener noreferrer'
+          className="p-3 rounded-full bg-secondary text-secondary-foreground hover:scale-110 transition-transform">
             <Github className="w-5 h-5" />
-          </button>
+          </a>
         </div>
       </div>
 
