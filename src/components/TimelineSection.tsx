@@ -92,7 +92,7 @@ const TimelineSection = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="processo" className="relative py-32 overflow-hidden"
+    <section id="process" className="relative py-32 overflow-hidden"
          style={{ backgroundColor: '#09070E' }}>
     
       {/* Background */}
@@ -127,6 +127,7 @@ const TimelineSection = () => {
               step={step}
               index={index}
               isLast={index === steps.length - 1}
+           
               
              
             />

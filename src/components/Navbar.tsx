@@ -31,16 +31,16 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass py-4' : 'py-6'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md py-4' : 'py-6'
           }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#hero"
+            href="#home"
             className="font-display text-2xl font-bold text-accent"
           >
-           <span className='text-gradient-neon'> Lid.Dev</span>
+           <span  className='text-gradient-neon'> Lid.Dev</span>
           </a>
 
 

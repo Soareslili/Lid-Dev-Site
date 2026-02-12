@@ -50,7 +50,7 @@ const AboutSection = () => {
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
     return (
-        <section id="sobre" className="relative py-30 overflow-hidden"
+        <section id="about" className="relative py-30 overflow-hidden"
             style={{ backgroundColor: '#09070E' }}>
 
             {/* Background effects */}

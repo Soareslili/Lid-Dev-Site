@@ -26,7 +26,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contato" className="relative py-32 overflow-hidden"
+    <section id="contact" className="relative py-32 overflow-hidden"
      style={{ backgroundColor: '#09070E' }}>
 
       {/* Background */}

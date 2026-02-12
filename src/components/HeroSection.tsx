@@ -3,7 +3,7 @@ import Scene3D from '../components/Scene3D';
 
 const HeroSection = () => {
   return (
-    <section id="hero"
+    <section id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: '#09070E' }}>
       <Scene3D />

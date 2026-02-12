@@ -4,6 +4,7 @@ import { ExternalLink, Github } from 'lucide-react';
 
 import Dashboard from '../assets/Dashboard.png'
 import Fitness from '../assets/Fitness.png'
+import Possessed from '../assets/Possessed.png'
 
 const projects = [
   {
@@ -20,6 +21,8 @@ const projects = [
     description: 'Dashboard de Gestão Odontológica desenvolvido para otimizar a organização, a eficiência e a tomada de decisão em clínicas.',
     image: Dashboard,
     tags: ['React', 'Tailwind', 'TypeScript'],
+    liveURL:'https://dasboard-dental-pro-lt4z.vercel.app/',
+    githubURL:'https://github.com/Soareslili/Dasboard---DentalPro.git'
   },
   {
     id: 3,
@@ -46,10 +49,12 @@ const projects = [
   },
   {
     id: 6,
-    title: 'Game Interface',
-    description: 'Interface de jogo com elementos futuristas e efeitos visuais.',
-    image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=600&h=400&fit=crop',
-    tags: ['WebGL', 'Canvas', 'React'],
+    title: 'Possessed – Site Institucional',
+    description: 'Site desenvolvido para apresentação profissional de serviços, com design moderno, responsivo e focado em experiência do usuário.',
+    image: Possessed,
+    tags: ['React', 'Typescript', 'Tailwind CSS', 'Vite'],
+    liveURL:'https://projeto-possessed-vygr.vercel.app/',
+    githubURL:'https://github.com/Soareslili/Projeto-Possessed.git'
   },
 ];
 
@@ -93,6 +98,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
     >
       {/* Glow effect on hover */}
       <div 
+    
         className={`absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-100' : ''}`}
       />
       
@@ -150,7 +156,7 @@ const ProjectsSection = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="projetos" className="relative py-32 overflow-hidden"
+    <section   id='projects' className="relative py-32 overflow-hidden"
       style={{ backgroundColor: '#09070E' }}>
     
       {/* Background */}
