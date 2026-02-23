@@ -5,15 +5,19 @@ import { ExternalLink, Github } from 'lucide-react';
 import Dashboard from '../assets/Dashboard.png'
 import Fitness from '../assets/Fitness.png'
 import Possessed from '../assets/Possessed.png'
+import LandingSass from '../assets/LandingPage.png'
+import HungryHeart from '../assets/HungryHeart.png'
+import Imigrante from '../assets/Imigrante.png'
 
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce 3D',
-    description: 'Loja virtual com visualização 3D de produtos e animações fluidas.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    tags: ['React', 'Three.js', 'Stripe'],
-    
+    title: 'HungryHeart Restaurant',
+    description: 'O HungryHeart Restaurant é um projeto de site institucional para um restaurante de alto padrão, com foco em experiência visual sofisticada, navegação elegante e apresentação premium do cardápio e da marca.',
+    image: HungryHeart,
+    tags: ['React', 'Tailwind', 'TypeScript'],
+    liveURL:'https://hungyheart-lnsi.vercel.app/',
+    githubURL:'https://github.com/Soareslili/Hungyheart.git'
   },
   {
     id: 2,
@@ -35,17 +39,21 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Portfolio Criativo',
-    description: 'Site portfolio com scroll parallax e transições suaves.',
-    image: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&h=400&fit=crop',
-    tags: ['React', 'GSAP', 'Framer'],
+    title: 'FlowManage — Landing Page SaaS',
+    description: 'Landing page institucional desenvolvida para o FlowManage, uma plataforma de gestão voltada para pequenos e médios negócios, com foco em organização, produtividade e eficiência.',
+    image: LandingSass,
+    tags: ['React', 'Tailwind CSS', 'Typescript'],
+    liveURL:'https://flow-manage-pearl.vercel.app/',
+    githubURL:'https://github.com/Soareslili/FlowManage.git'
   },
   {
     id: 5,
-    title: 'Landing Page SaaS',
-    description: 'Página de vendas com micro-interações e alta conversão.',
-    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop',
-    tags: ['Vue.js', 'Animation', 'SEO'],
+    title: ' VisaConsulting — Plataforma de Consultoria de Vistos & Imigração',
+    description: 'Uma aplicação web moderna desenvolvida com React + TypeScript + Vite, criada para auxiliar clientes no processo de orientação, preparação e acompanhamento de vistos e imigração, oferecendo uma experiência clara, intuitiva e profissional.',
+    image: Imigrante,
+    tags: ['React', 'Tailwind CSS', 'Typescript'],
+    liveURL:'https://visa-consulting-4c1z.vercel.app/',
+    githubURL:'https://github.com/Soareslili/Visa-Consulting.git'
   },
   {
     id: 6,
