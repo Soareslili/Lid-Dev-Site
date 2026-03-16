@@ -70,13 +70,13 @@ const HeroSection = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
           >
             <a
-              href="#projetos"
+              href="#projects"
               className="btn-neon px-8 py-4 rounded-lg bg-primary text-primary-foreground"
             >
               Ver Projetos
             </a>
             <a
-              href="#contato"
+              href="#contact"
               className="btn-outline-neon px-8 py-4 border border-primary rounded-lg text-primary font-bold"
             >
               Contato

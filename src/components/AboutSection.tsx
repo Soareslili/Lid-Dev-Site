@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { Code2, Palette, Zap, Sparkles } from 'lucide-react';
+import ImgDev from '../assets/Lidi.jpg'
 
 const TypewriterText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
     const [displayText, setDisplayText] = useState('');
@@ -81,25 +82,22 @@ const AboutSection = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="relative"
                     >
-                        <div className="relative w-80 h-80 mx-auto">
+                        <div className="relative w-[420px] h-[420px] mx-auto">
+
                             {/* Outer glow ring */}
                             <div className="absolute inset-0 rounded-full bg-gradient-neon opacity-20 blur-xl animate-pulse" />
 
                             {/* Avatar container */}
                             <div className="relative w-full h-full rounded-full border-2 border-primary/30 overflow-hidden glass">
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="font-display text-8xl gradient-text font-bold">L</span>
-                                </div>
+
+                                <img
+                                    src={ImgDev}
+                                    alt="Lidiane"
+                                    className="w-full h-full object-cover rounded-full"
+                                />
                             </div>
 
-                            {/* Floating elements */}
-                            <div className="absolute -top-4 -right-4 w-16 h-16 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center animate-float">
-                                <Code2 className="w-8 h-8 text-primary" />
-                            </div>
-                            <div className="absolute -bottom-4 -left-4 w-14 h-14 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center animate-float" style={{ animationDelay: '1s' }}>
-                                <Sparkles className="w-7 h-7 text-accent" />
-                            </div>
                         </div>
                     </motion.div>
 
