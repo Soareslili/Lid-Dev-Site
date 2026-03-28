@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { Code2, Palette, Zap, Sparkles } from 'lucide-react';
-import ImgDev from '../assets/Lidi.jpg'
+import ImgDev from '../assets/Lidiane.jpg'
 
 const TypewriterText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
     const [displayText, setDisplayText] = useState('');
@@ -82,19 +82,19 @@ const AboutSection = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="relative"
                     >
-                        <div className="relative w-[420px] h-[420px] mx-auto">
+                        <div className="relative w-[500px] h-[500px] mx-auto">
 
                             {/* Outer glow ring */}
                             <div className="absolute inset-0 rounded-full bg-gradient-neon opacity-20 blur-xl animate-pulse" />
 
                             {/* Avatar container */}
-                            <div className="relative w-full h-full rounded-full border-2 border-primary/30 overflow-hidden glass">
+                            <div className="relative w-130 h-140 rounded-2xl border-2 border-primary/30 overflow-hidden glass">
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
 
                                 <img
                                     src={ImgDev}
                                     alt="Lidiane"
-                                    className="w-full h-full object-cover rounded-full"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
 
