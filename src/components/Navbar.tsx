@@ -60,7 +60,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <a
-            href="#contato"
+            href="#contact"
             className="hidden md:block bg-primary px-6 py-2 rounded-lg text-sm text-primary-foreground"
           >
             Orçamento

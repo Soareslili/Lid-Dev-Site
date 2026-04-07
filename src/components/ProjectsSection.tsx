@@ -49,7 +49,7 @@ const projects = [
   {
     id: 5,
     title: ' VisaConsulting — Plataforma de Consultoria de Vistos & Imigração',
-    description: 'Uma aplicação web moderna desenvolvida com React + TypeScript + Vite, criada para auxiliar clientes no processo de orientação, preparação e acompanhamento de vistos e imigração, oferecendo uma experiência clara, intuitiva e profissional.',
+    description: 'Uma aplicação web moderna desenvolvida para auxiliar clientes no processo de orientação, preparação e acompanhamento de vistos e imigração, oferecendo uma experiência clara, intuitiva e profissional.',
     image: Imigrante,
     tags: ['React', 'Tailwind CSS', 'Typescript'],
     liveURL:'https://visa-consulting-4c1z.vercel.app/',
