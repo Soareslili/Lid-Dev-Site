@@ -7,7 +7,7 @@ import Fitness from '../assets/Fitness.png'
 import Possessed from '../assets/Possessed.png'
 import LandingSass from '../assets/LandingPage.png'
 import HungryHeart from '../assets/HungryHeart.png'
-import Imigrante from '../assets/Imigrante.png'
+import Maison from '../assets/Maison.png'
 
 const projects = [
   {
@@ -48,12 +48,12 @@ const projects = [
   },
   {
     id: 5,
-    title: ' VisaConsulting — Plataforma de Consultoria de Vistos & Imigração',
-    description: 'Uma aplicação web moderna desenvolvida para auxiliar clientes no processo de orientação, preparação e acompanhamento de vistos e imigração, oferecendo uma experiência clara, intuitiva e profissional.',
-    image: Imigrante,
+    title: ' MaisonHD - Restaurante Premium',
+    description: 'Projeto de site institucional para um restaurante de alto padrão, desenvolvido com foco em elegância, experiência do usuário e conversão de clientes.',
+    image: Maison,
     tags: ['React', 'Tailwind CSS', 'Typescript'],
-    liveURL:'https://visa-consulting-4c1z.vercel.app/',
-    githubURL:'https://github.com/Soareslili/Visa-Consulting.git'
+    liveURL:'https://maisonhb-gastromic-olw2.vercel.app/',
+    githubURL:'https://github.com/Soareslili/Maisonhb--Gastromic.git'
   },
   {
     id: 6,
