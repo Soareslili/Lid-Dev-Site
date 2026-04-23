@@ -1,12 +1,26 @@
 import { motion } from 'framer-motion';
-import Scene3D from '../components/Scene3D';
+import GradientBarsBackground from './ui/gradient-bars-background';
+
+
 
 const HeroSection = () => {
   return (
     <section id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: '#09070E' }}>
-      <Scene3D />
+      >
+
+        <div className='absolute inset-0 z-0 pointer-events-none'>
+          <GradientBarsBackground
+          numBars={15}
+          gradientFrom="rgb(255, 0, 247)"
+          gradientTo="transparent"
+          animationDuration={1}
+        />
+        </div>
+
+     
+
+
 
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] 
@@ -17,14 +31,13 @@ const HeroSection = () => {
     bg-cyan-400/20 rounded-full blur-[140px]" />
       </div>
 
-      {/* Gradient overlays */}
-      {/* Gradient overlays */}
+     
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#09070E]/60 to-[#09070E] pointer-events-none" />
 
       <div className="absolute inset-0 bg-gradient-radial from-purple-500/25 via-transparent to-transparent pointer-events-none" />
 
 
-      {/* Content */}
+   
       <div className="relative z-10 container mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -46,9 +59,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <span className="block text-foreground">Crio Experiências</span>
+            <span className="block text-foreground">Sites Profissionais com</span>
             <span className="block text-purple-400 drop-shadow-[0_0_30px_rgba(168,85,247,0.7)]">
-              Digitais Modernas em 3D
+              Design, Estratégia e Presença
             </span>
 
           </motion.h1>

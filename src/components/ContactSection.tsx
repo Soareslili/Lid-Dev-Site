@@ -1,7 +1,8 @@
 import { motion, useInView } from 'framer-motion';
+import { Send } from 'lucide-react';
 import { useRef, useState } from 'react';
-import { Send, Instagram, Mail, Phone, Linkedin} from 'lucide-react';
 import { toast } from 'sonner';
+
 
 const ContactSection = () => {
   const sectionRef = useRef(null);
@@ -18,15 +19,10 @@ const ContactSection = () => {
     setFormData({ name: '', email: '', message: '' });
   };
 
-  const socialLinks = [
-    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/lid.dev?igsh=bWs3Y2d2djN2YXVh&utm_source=qr' },
-    { icon: Linkedin, label: 'Linkedin', href: 'http://www.linkedin.com/in/lidianesantossoares' },
-    { icon: Phone, label: 'WhatsApp', href: 'https://wa.me/5511948739869' },
-    { icon: Mail, label: 'Email', href: 'mailto:lidianesantossoares2@gmail.com' },
-  ];
+
 
   return (
-    <section id="contact" className="relative py-32 overflow-hidden"
+    <section id="contact" className="relative py-20 overflow-hidden"
      style={{ backgroundColor: '#09070E' }}>
 
       {/* Background */}
@@ -60,7 +56,7 @@ const ContactSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 items-center ">
               <div>
                 <label className="block text-sm font-display text-foreground mb-2">
                   Nome
@@ -112,40 +108,18 @@ const ContactSection = () => {
             </form>
           </motion.div>
 
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col justify-center mb-20"
-          >
-            <div className="space-y-6">
-              {socialLinks.map((link, index) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                  className="group flex items-center gap-4 p-4 rounded-xl border border-primary shadow-sm shadow-primary hover:bg-primary/5 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <link.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="font-body text-lg text-foreground group-hover:text-primary transition-colors">
-                    {link.label}
-                  </span>
-                </motion.a>
-              ))}
-            </div>
+        
+       
+            
+        
 
             
-          </motion.div>
+        
         </div>
       </div>
     </section>
+
+    
   );
 };
 

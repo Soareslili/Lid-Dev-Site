@@ -30,8 +30,7 @@ function App() {
         <ProjectsSection />
         <TimelineSection />
         <ContactSection />
-        <Footer />
-       
+       <Footer />
       </main>
     </>
     </>
