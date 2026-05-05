@@ -35,7 +35,7 @@ const Navbar = () => {
           }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          {/* Logo */}
+      
           <a
             href="#home"
             className="font-display text-2xl font-bold text-accent"
@@ -44,7 +44,7 @@ const Navbar = () => {
           </a>
 
 
-          {/* Desktop Navigation */}
+        
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -58,7 +58,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+        
           <a
             href="#contact"
             className="hidden md:block bg-primary px-6 py-2 rounded-lg text-sm text-primary-foreground"
@@ -66,9 +66,9 @@ const Navbar = () => {
             Orçamento
           </a>
 
-          {/* Mobile Menu Button */}
+      
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 cursor-pointer text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
+    
       <motion.div
         initial={false}
         animate={{

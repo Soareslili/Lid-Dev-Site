@@ -104,13 +104,13 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
       className="group relative rounded-2xl overflow-hidden border-glow glass transition-all duration-300"
       style={{ transformStyle: 'preserve-3d' }}
     >
-      {/* Glow effect on hover */}
+     
       <div 
     
         className={`absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-100' : ''}`}
       />
       
-      {/* Image */}
+    
       <div className="relative h-48 overflow-hidden">
         <img
           src={project.image}
@@ -119,7 +119,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
         
-        {/* Overlay buttons */}
+      
         <div className={`absolute inset-0 flex items-center justify-center gap-4 bg-background/80 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
           <a href={project.liveURL} 
            target="_blank" rel='noopener noreferrer'
@@ -134,7 +134,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
         </div>
       </div>
 
-      {/* Content */}
+   
       <div className="p-6 bg-primary/5 shadow-lg shadow-primary/50" style={{ transform: 'translateZ(20px)' }}>
         <h3 className="font-display text-xl font-bold text-foreground mb-2  group-hover:text-primary transition-colors">
           {project.title}
@@ -143,7 +143,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           {project.description}
         </p>
         
-        {/* Tags */}
+      
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
@@ -167,7 +167,7 @@ const ProjectsSection = () => {
     <section   id='projects' className="relative py-32 overflow-hidden"
       style={{ backgroundColor: '#09070E' }}>
     
-      {/* Background */}
+  
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/10 to-background" />
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />

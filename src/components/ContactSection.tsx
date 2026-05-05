@@ -1,7 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { Send } from 'lucide-react';
 import { useRef, useState } from 'react';
-import { toast } from 'sonner';
 
 
 const ContactSection = () => {
@@ -13,19 +12,45 @@ const ContactSection = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsLoading(true);
+    setStatus('idle');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xdabgjzp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
 
-
   return (
-    <section id="contact" className="relative py-20 overflow-hidden"
-     style={{ backgroundColor: '#09070E' }}>
+    <section id="contact" className="relative py-18 overflow-hidden"
+      style={{ backgroundColor: '#09070E' }}>
 
-      {/* Background */}
+    
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/10 to-background" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
 
@@ -44,13 +69,13 @@ const ContactSection = () => {
             <span className="text-gradient-neon">Conversar</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Pronta para transformar sua ideia em realidade. 
+            Pronta para transformar sua ideia em realidade.
             Entre em contato e vamos criar algo incrível juntos!
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12">
-          {/* Form */}
+        <div className="max-w-3xl mx-auto bg-background/50 backdrop-blur-lg rounded-2xl p-8 shadow-lg">
+       
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -70,7 +95,7 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-display text-foreground mb-2">
                   E-mail
@@ -84,7 +109,7 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-display text-foreground mb-2">
                   Mensagem
@@ -97,29 +122,35 @@ const ContactSection = () => {
                   required
                 />
               </div>
+              
+              {status === 'success' && (
+                <p className="text-green-500 text-sm text-center">
+                  ✅ Mensagem enviada com sucesso!
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-500 text-sm text-center">
+                  ❌ Erro ao enviar. Tente novamente.
+                </p>
+              )}
 
               <button
                 type="submit"
-                className="bg-primary w-full cursor-pointer py-4 rounded-lg text-accent-foreground  flex items-center justify-center gap-2 group"
+                disabled={isLoading}
+                className="bg-primary w-full cursor-pointer py-4 rounded-lg text-accent-foreground flex items-center justify-center gap-2 disabled:opacity-60"
               >
-                <span>Enviar Mensagem</span>
+                <span>{isLoading ? 'Enviando...' : 'Enviar Mensagem'}</span>
                 <Send className="w-5 h-5 text-accent-foreground" />
               </button>
             </form>
           </motion.div>
 
-        
-       
-            
-        
 
-            
-        
         </div>
       </div>
     </section>
 
-    
+
   );
 };
 

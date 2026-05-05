@@ -37,14 +37,14 @@
 
   --color-radius: 0.75rem;
 
-  /* ======== TOKENS FUTURISTAS (em HEX) ======== */
+
 
   --color-neon-purple: #a554f6;
   --color-neon-blue: #07e3f7;
   --color-neon-pink: #f43db7;
   --color-dark-purple: #190c26;
 
-  /* ======== GLOW (sombras com RGBA numérico) ======== */
+
 
   --color-glow-purple:
     0 0 20px rgba(165, 84, 246, 0.5),
@@ -56,7 +56,7 @@
     0 0 40px rgba(7, 227, 247, 0.3),
     0 0 60px rgba(7, 227, 247, 0.1);
 
-  /* ======== GRADIENTES (em HEX) ======== */
+
 
  
   --color-gradient-neon: linear-gradient(

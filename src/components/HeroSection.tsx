@@ -45,7 +45,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.span
-            className="inline-block mb-6 px-4 py-2 rounded-full border border-primary/30 text-primary font-display text-sm tracking-widest uppercase glow-purple"
+            className="inline-block mb-6 px-4 py-2 mt-12 rounded-full border border-primary/30 text-primary font-display text-sm tracking-widest uppercase glow-purple"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}

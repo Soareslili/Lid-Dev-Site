@@ -45,7 +45,7 @@ const TimelineStep = ({ step, index, isLast }: { step: typeof steps[0]; index: n
       transition={{ duration: 0.6, delay: index * 0.2 }}
       className={`relative flex items-center gap-8 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}
     >
-      {/* Content */}
+    
       <div className={`flex-1 ${isEven ? 'md:text-right' : 'md:text-left'}`}>
         <div className={`inline-block p-6 rounded-2xl border-glow  hover:bg-primary/10 transition-all duration-300 ${isEven ? 'md:ml-auto' : 'md:mr-auto'}`}>
           <h3 className="font-display text-xl font-bold text-foreground mb-2">
@@ -57,7 +57,7 @@ const TimelineStep = ({ step, index, isLast }: { step: typeof steps[0]; index: n
         </div>
       </div>
 
-      {/* Icon */}
+   
       <div className="relative z-10 flex-shrink-0">
         <motion.div
           initial={{ scale: 0 }}
@@ -70,7 +70,7 @@ const TimelineStep = ({ step, index, isLast }: { step: typeof steps[0]; index: n
           </div>
         </motion.div>
         
-        {/* Connecting line */}
+    
         {!isLast && (
           <motion.div
             initial={{ height: 0 }}
@@ -81,7 +81,7 @@ const TimelineStep = ({ step, index, isLast }: { step: typeof steps[0]; index: n
         )}
       </div>
 
-      {/* Spacer for alignment */}
+  
       <div className="flex-1 hidden md:block" />
     </motion.div>
   );
@@ -95,7 +95,7 @@ const TimelineSection = () => {
     <section id="process" className="relative py-32 overflow-hidden"
          style={{ backgroundColor: '#09070E' }}>
     
-      {/* Background */}
+    
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/10 to-background" />
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
