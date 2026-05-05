@@ -19,11 +19,11 @@ const GradientBars: React.FC<GradientBarsProps> = ({
     const position = index / (total - 1);
     const maxHeight = 100;
     const minHeight = 30;
-    
+
     const center = 0.5;
     const distanceFromCenter = Math.abs(position - center);
     const heightPercentage = Math.pow(distanceFromCenter * 2, 1.2);
-    
+
     return minHeight + (maxHeight - minHeight) * heightPercentage;
   };
 
@@ -35,9 +35,9 @@ const GradientBars: React.FC<GradientBarsProps> = ({
           100% { transform: scaleY(calc(var(--initial-scale) * 0.7)); }
         }
       `}</style>
-      
+
       <div className={`absolute inset-0 z-0 overflow-hidden ${className}`}>
-        <div 
+        <div
           className="flex h-full"
           style={{
             width: '100%',
@@ -49,6 +49,7 @@ const GradientBars: React.FC<GradientBarsProps> = ({
           {Array.from({ length: numBars }).map((_, index) => {
             const height = calculateHeight(index, numBars);
             return (
+             
               <div
                 key={index}
                 style={{
@@ -63,9 +64,9 @@ const GradientBars: React.FC<GradientBarsProps> = ({
                   animationDelay: `${index * 0.1}s`,
                   outline: '1px solid rgba(0, 0, 0, 0)',
                   boxSizing: 'border-box',
-                
                   '--initial-scale': height / 100,
-                }}
+                } as React.CSSProperties}  
+
               />
             );
           })}
@@ -93,7 +94,7 @@ export default function Component({
   children,
 }: ComponentProps) {
   return (
-    <section 
+    <section
       className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden"
       style={{ backgroundColor }}
     >
@@ -103,7 +104,7 @@ export default function Component({
         gradientTo={gradientTo}
         animationDuration={animationDuration}
       />
-      
+
       {children && (
         <div className="relative z-10 w-full h-full flex items-center justify-center px-4">
           {children}
