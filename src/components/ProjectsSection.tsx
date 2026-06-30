@@ -4,10 +4,13 @@ import { ExternalLink, Github } from 'lucide-react';
 
 import Dashboard from '../assets/Dashboard.png'
 import Fitness from '../assets/Fitness.png'
-import Possessed from '../assets/Possessed.png'
+
 import LandingSass from '../assets/LandingPage.png'
 import HungryHeart from '../assets/HungryHeart.png'
 import Maison from '../assets/Maison.png'
+import Custom from '../assets/Custom.png'
+import Artisan from '../assets/Artisan.png'
+import Chennai from '../assets/Chennai.png'
 
 const projects = [
   {
@@ -57,12 +60,32 @@ const projects = [
   },
   {
     id: 6,
-    title: 'Possessed – Site Institucional',
-    description: 'Site desenvolvido para apresentação profissional de serviços, com design moderno, responsivo e focado em experiência do usuário.',
-    image: Possessed,
+    title: 'Custom Rose - Tattoo Studio',
+    description: 'Projeto de site institucional para um estúdio de tatuagem, desenvolvido com foco em experiência do usuário, apresentação do portfólio e conversão de clientes.',
+    image: Custom,
     tags: ['React', 'Typescript', 'Tailwind CSS', 'Vite'],
-    liveURL:'https://projeto-possessed-vygr.vercel.app/',
-    githubURL:'https://github.com/Soareslili/Projeto-Possessed.git'
+    liveURL:'https://custom-rose.vercel.app/',
+    githubURL:'https://github.com/Soareslili/Custom-Rose.git'
+  },
+
+   {
+    id: 7,
+    title: 'Artisan Store - E-commerce de Bolsas',
+    description: 'O Artisan Store é um e-commerce moderno e elegante desenvolvido para apresentar bolsas de forma sofisticada, proporcionando uma experiência visual agradável e intuitiva para o usuário.',
+    image: Artisan,
+    tags: ['React', 'Typescript', 'Tailwind CSS', 'Vite'],
+    liveURL:'https://projeto-artisan.vercel.app/',
+    githubURL:'https://github.com/Soareslili/Projeto-Artisan.git'
+  },
+
+   {
+    id: 8,
+    title: 'Chennai - Restaurante & Catering',
+    description: 'O Chennai é um restaurante e serviço de catering que oferece uma experiência gastronômica única, combinando tradição e inovação em cada prato.',
+    image: Chennai,
+    tags: ['React', 'Typescript', 'Tailwind CSS', 'Vite'],
+    liveURL:'https://chennai-express-4c7u.vercel.app/',
+    githubURL:'https://github.com/Soareslili/Chennai-Express.git'
   },
 ];
 
